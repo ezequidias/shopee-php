@@ -84,8 +84,6 @@ class ClientV2
 
     public $merchantId;
 
-    public $verify_ssl;
-
     /**
      * @var string
      */
@@ -123,7 +121,6 @@ class ClientV2
         $this->accessToken = $config['access_token'];
         $this->merchantId = $config['merchant_id'];
         $this->apiType = $config['api_type'];
-        $this->verify_ssl = $config['verify_ssl'];
 
         $signatureGenerator = $config[SignatureGeneratorInterface::class];
         if (is_null($signatureGenerator)) {
