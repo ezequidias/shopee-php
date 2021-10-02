@@ -258,7 +258,6 @@ class ClientV2
         $auth_query = $this->signature($uri, $api_type);
         $path = $this->baseUrl->getPath() . $uri->getPath();
         $uri = $uri
-            ->withOptions(['verify' => $this->verify_ssl])
             ->withScheme($this->baseUrl->getScheme())
             ->withUserInfo($this->baseUrl->getUserInfo())
             ->withHost($this->baseUrl->getHost())
